@@ -1,0 +1,35 @@
+<h1>List of users</h1>
+
+<table border="1">
+  <tr>
+    <th>
+      Id
+    </th>
+
+    <th>
+      Username
+    </th>
+
+    <th>
+    </th>
+
+    <% @list_of_users.each do |user| %>
+      <tr>
+        <td>
+          <%=user.id%>
+        </td>
+
+        <td>
+          <%=user.username%>
+        </td>
+
+        <td>
+          <a href="/users/<%= user.username %>"> 
+            Show details
+          </a>
+        </td>
+      </tr>
+
+    <% end %>
+  </tr>
+</table>
